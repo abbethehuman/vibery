@@ -1,0 +1,399 @@
+/* ===========================
+   GLOBAL STYLES
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #8B7E6B;      /* Warm taupe */
+    --secondary-color: #D4A574;    /* Soft gold */
+    --accent-color: #6FA388;       /* Sage green */
+    --light-bg: #F9F7F4;           /* Warm white */
+    --dark-text: #3E3E3E;          /* Charcoal */
+    --border-color: #E8E3DC;       /* Light tan */
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+
+.hero {
+    background: linear-gradient(135deg, rgba(139, 126, 107, 0.1), rgba(111, 163, 136, 0.1));
+    padding: 6rem 2rem;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    color: var(--dark-text);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 163, 136, 0.3);
+}
+
+/* ===========================
+   FEATURED PRODUCTS SECTION
+   =========================== */
+
+.featured {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 20px rgba(139, 126, 107, 0.15);
+    transform: translateY(-4px);
+}
+
+.product-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.product-card p {
+    color: var(--dark-text);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* ===========================
+   CTA SECTION
+   =========================== */
+
+.cta {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.cta .cta-button {
+    background-color: white;
+    color: var(--accent-color);
+}
+
+.cta .cta-button:hover {
+    background-color: var(--light-bg);
+}
+
+/* ===========================
+   ABOUT SECTION
+   =========================== */
+
+.about-section {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.about-container h1 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-list {
+    list-style: none;
+    padding: 2rem;
+    background-color: white;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+.philosophy-list li {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.philosophy-list li:last-child {
+    margin-bottom: 0;
+}
+
+.about-cta {
+    background: linear-gradient(135deg, rgba(139, 126, 107, 0.08), rgba(111, 163, 136, 0.08));
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.about-cta h3 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-cta p {
+    margin-bottom: 2rem;
+    color: var(--dark-text);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .featured h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-container h1 {
+        font-size: 2rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+        min-height: 350px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .featured {
+        margin: 2rem auto;
+    }
+
+    .featured h2 {
+        font-size: 1.5rem;
+    }
+}
